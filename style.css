@@ -1,0 +1,52 @@
+* Grundlegendes Layout und Design */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Passwortabfrage Container */
+.password-container {
+    text-align: center;
+}
+
+#content {
+    display: none;  /* Initial ausgeblendet */
+    animation: fadeIn 3s ease-in-out;
+}
+
+img {
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Auf mobile Geräte anpassen */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    img {
+        width: 90%;
+    }
+}
