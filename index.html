@@ -3,28 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passwortgeschützte Seite</title>
+    <title>Haruns Privatseite</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Verlinkung zur CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="password-container">
-        <script>
-            var password = prompt("Bitte geben Sie das Passwort ein:");
+    <script>
+        var password = prompt("Bitte geben Sie das Passwort ein:");
 
-            if (password !== "deinPasswort") {
-                alert("Falsches Passwort!");
-                window.location = "https://www.google.com";  <!-- Umleitung bei falschem Passwort -->
-            } else {
-                document.getElementById("content").style.display = "block";  <!-- Zeige Inhalte bei korrektem Passwort -->
-            }
-        </script>
+        if (password !== "deinPasswort") {
+            alert("Falsches Passwort!");
+            window.location = "https://www.google.com";  <!-- Umleitung bei falschem Passwort -->
+        } else {
+            document.getElementById("content").style.display = "block";  <!-- Zeige Inhalte bei korrektem Passwort -->
+        }
+    </script>
 
-        <div id="content" style="display:none;"> <!-- Verstecke Inhalte zunächst -->
-            <h1>Willkommen auf meiner kreativen Seite!</h1>
-            <p>Hier kannst du meine Bilder und Inhalte sehen.</p>
-            <img src="https://yourusername.github.io/path/to/your-image.jpg" alt="Beispielbild">
+    <div id="content" style="display:none;">
+        <header>
+            <h1>Haruns Privatseite</h1>
+            <p>Willkommen! Hier sind meine Bilder.</p>
+        </header>
+
+        <div class="gallery">
+            <div class="image-container">
+                <img src="https://yourusername.github.io/path/to/mein-bild-1.jpg" alt="Mein Bild 1">
+                <p>Bild 1</p>
+            </div>
+
+            <div class="image-container">
+                <img src="https://yourusername.github.io/path/to/mein-bild-2.jpg" alt="Mein Bild 2">
+                <p>Bild 2</p>
+            </div>
+
+            <div class="image-container">
+                <img src="https://yourusername.github.io/path/to/mein-bild-3.jpg" alt="Mein Bild 3">
+                <p>Bild 3</p>
+            </div>
+
+            <div class="image-container">
+                <img src="https://yourusername.github.io/path/to/mein-bild-4.jpg" alt="Mein Bild 4">
+                <p>Bild 4</p>
+            </div>
+
+            <div class="image-container">
+                <img src="https://yourusername.github.io/path/to/mein-bild-5.jpg" alt="Mein Bild 5">
+                <p>Bild 5</p>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
