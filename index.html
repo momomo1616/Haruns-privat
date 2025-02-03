@@ -3,55 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haruns Privatseite</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Sportlicher Kalorienrechner</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <script>
-        var password = prompt("Bitte geben Sie das Passwort ein:");
 
-        if (password !== "deinPasswort") {
-            alert("Falsches Passwort!");
-            window.location = "https://www.google.com";  <!-- Umleitung bei falschem Passwort -->
-        } else {
-            document.getElementById("content").style.display = "block";  <!-- Zeige Inhalte bei korrektem Passwort -->
-        }
-    </script>
+    <!-- Hero-Bereich mit sportlichem Bild -->
+    <div class="hero">
+        <h1><i class="fas fa-fire"></i> Kalorienrechner</h1>
+        <p>Berechne deinen Grundumsatz, Leistungsumsatz und Gesamtumsatz</p>
+        <img src="imagesportbild1.jpg" alt="Sportbild" class="animiertes-bild">
+    </div>
 
-    <div id="content" style="display:none;">
-        <header>
-            <h1>Haruns Privatseite</h1>
-            <p>Willkommen! Hier sind meine Bilder.</p>
-        </header>
+    <div class="container">
+        <form id="kalorienForm">
+            <label for="geschlecht">Geschlecht:</label>
+            <select id="geschlecht">
+                <option value="m">Männlich</option>
+                <option value="w">Weiblich</option>
+            </select>
 
-        <div class="gallery">
-            <div class="image-container">
-                <img src="https://yourusername.github.io/path/to/mein-bild-1.jpg" alt="Mein Bild 1">
-                <p>Bild 1</p>
-            </div>
+            <label for="gewicht">Gewicht (kg):</label>
+            <input type="number" id="gewicht" required>
 
-            <div class="image-container">
-                <img src="https://yourusername.github.io/path/to/mein-bild-2.jpg" alt="Mein Bild 2">
-                <p>Bild 2</p>
-            </div>
+            <label for="groesse">Größe (cm):</label>
+            <input type="number" id="groesse" required>
 
-            <div class="image-container">
-                <img src="https://yourusername.github.io/path/to/mein-bild-3.jpg" alt="Mein Bild 3">
-                <p>Bild 3</p>
-            </div>
+            <label for="alter">Alter (Jahre):</label>
+            <input type="number" id="alter" required>
 
-            <div class="image-container">
-                <img src="https://yourusername.github.io/path/to/mein-bild-4.jpg" alt="Mein Bild 4">
-                <p>Bild 4</p>
-            </div>
+            <label for="aktivitaet">Aktivitätslevel:</label>
+            <select id="aktivitaet">
+                <option value="1.2">Kaum Bewegung</option>
+                <option value="1.375">Leicht aktiv (1-3x Sport/Woche)</option>
+                <option value="1.55">Mäßig aktiv (3-5x Sport/Woche)</option>
+                <option value="1.725">Sehr aktiv (6-7x Sport/Woche)</option>
+                <option value="1.9">Extrem aktiv (tägliches Training)</option>
+            </select>
 
-            <div class="image-container">
-                <img src="https://yourusername.github.io/path/to/mein-bild-5.jpg" alt="Mein Bild 5">
-                <p>Bild 5</p>
-            </div>
+            <button type="button" onclick="berechneKalorien()">Berechnen</button>
+        </form>
+
+        <div id="ergebnis-container">
+            <h2 id="grundumsatz"></h2>
+            <h2 id="leistungsumsatz"></h2>
+            <h2 id="gesamtumsatz"></h2>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
